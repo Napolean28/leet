@@ -13,7 +13,7 @@ class MinSizeSubArraySum {
     int sum = 0;
     for(int j = 0; j < arr.size(); j++){
       sum += arr[j];
-      if(sum >= S){
+      while(sum >= S){
         len = min(len, j - i + 1);
         sum -= arr[i];
         i++;
